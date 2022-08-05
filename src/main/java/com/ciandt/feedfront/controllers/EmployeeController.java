@@ -36,7 +36,7 @@ public class EmployeeController {
 
     @Operation(description = "Retorna o dado pelo ID")
     @GetMapping("/buscarPorId")
-    public ResponseEntity<Employee> buscar(@RequestParam(required = false) Long id) throws BusinessException, EmployeeNaoEncontradoException {
+    public ResponseEntity<Employee> buscar(@RequestParam Long id) throws BusinessException, EmployeeNaoEncontradoException {
         return ResponseEntity.ok(employeeService.buscar(id));
     }
 
